@@ -2,6 +2,7 @@
   <div class="wrapper">
     <image :src="logo" class="logo" />
     <text class="greeting">The environment is ready!</text>
+    <router-link to="/geolocation">Geolocation</router-link>
     <router-view/>
   </div>
 </template>

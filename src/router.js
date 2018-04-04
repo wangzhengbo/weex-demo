@@ -1,6 +1,7 @@
 /* global Vue */
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
+import Geolocation from '@/components/Geolocation'
 
 Vue.use(Router)
 
@@ -10,6 +11,11 @@ module.exports = new Router({
       path: '/',
       name: 'HelloWorld',
       component: HelloWorld
+    },
+    {
+      path: '/geolocation',
+      name: 'Geolocation',
+      component: Geolocation
     }
   ]
 })
