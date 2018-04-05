@@ -59,4 +59,7 @@ typings/
 
 dist
 .temp
+platforms/android/.gradle
+platforms/android/app/build
+platforms/android/build
 

@@ -2,7 +2,10 @@
   <div class="wrapper">
     <image :src="logo" class="logo" />
     <text class="greeting">The environment is ready!</text>
-    <router-link to="/geolocation">Geolocation</router-link>
+    <router-link class="link" to="/geolocation">Geolocation</router-link>
+    <router-link class="link" to="/test">Test</router-link>
+    <router-link class="link" to="/test">Audio</router-link>
+    <router-link class="link" to="/record">Record</router-link>
     <router-view/>
   </div>
 </template>
@@ -32,6 +35,10 @@ export default {
     margin-top: 70px;
     font-size: 50px;
     color: #41B883;
+  }
+  .link {
+    margin: 30px;
+    font-size: 40px;
   }
   .message {
     margin: 30px;
