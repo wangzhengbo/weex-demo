@@ -84,6 +84,7 @@
     "webpack-dev-server": "^2.9.7",
     "webpack-merge": "^4.1.0",
     "webpack-uglify-parallel": "^0.1.4",
+    "weex-hello": "^0.1.1",
     "weex-loader": "^0.7.2",
     "weex-vue-precompiler": "^0.1.17"
   },

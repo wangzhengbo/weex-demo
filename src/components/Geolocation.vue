@@ -6,6 +6,7 @@
 </template>
 <script>
 import Nat from 'natjs'
+// eslint-disable-next-line
 const geolocation = weex.requireModule('nat/geolocation')
 
 export default {
