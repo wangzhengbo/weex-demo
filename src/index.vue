@@ -2,6 +2,7 @@
   <div class="wrapper">
     <image :src="logo" class="logo" />
     <text class="greeting">The environment is ready!</text>
+    <text class="greeting">{{ config.bundleUrl }}</text>
     <router-link class="link" to="/geolocation">Geolocation</router-link>
     <router-link class="link" to="/test">Test</router-link>
     <router-link class="link" to="/test">Audio</router-link>
@@ -15,7 +16,8 @@ export default {
   name: 'App',
   data () {
     return {
-      logo: 'https://gw.alicdn.com/tfs/TB1yopEdgoQMeJjy1XaXXcSsFXa-640-302.png'
+      logo: 'https://gw.alicdn.com/tfs/TB1yopEdgoQMeJjy1XaXXcSsFXa-640-302.png',
+      config: weex.config // eslint-disable-line
     }
   }
 }
