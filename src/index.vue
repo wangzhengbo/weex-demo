@@ -2,7 +2,7 @@
   <div class="wrapper">
     <image :src="logo" class="logo" />
     <text class="greeting">The environment is ready!</text>
-    <text class="greeting">{{ config.bundleUrl }}</text>
+    <text class="greeting" @click="push('entry2')">{{ config.bundleUrl }}</text>
     <router-link class="link" to="/geolocation">Geolocation</router-link>
     <router-link class="link" to="/test">Test</router-link>
     <router-link class="link" to="/test">Audio</router-link>
@@ -12,8 +12,11 @@
 </template>
 
 <script>
+import mixin from './mixins/index'
+
 export default {
   name: 'App',
+  mixins: [mixin],
   data () {
     return {
       logo: 'https://gw.alicdn.com/tfs/TB1yopEdgoQMeJjy1XaXXcSsFXa-640-302.png',

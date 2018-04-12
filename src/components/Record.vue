@@ -22,7 +22,7 @@ export default {
   },
   mounted () {
     try {
-      if (Nat.audio && Nat.audio.play) {
+      if (weex.config.env.platform != 'Web' && Nat.audio && Nat.audio.play) {
         Nat.audio.play('http://cdn.instapp.io/nat/samples/audio.mp3')
       }
     } catch (e) {

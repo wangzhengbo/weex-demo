@@ -8,6 +8,8 @@ import Test from '@/components/Test'
 // import WeexHelloWeb from '@/components/WeexHelloWeb'
 import ExtendHtml5 from '@/components/ExtendHtml5'
 import WxButton from '@/components/weex-ui/Button'
+import Entry2 from '@/components/Entry2'
+import Entry3 from '@/components/Entry3'
 
 Vue.use(Router)
 
@@ -52,6 +54,16 @@ module.exports = new Router({
       path: '/wx-button',
       name: 'WxButton',
       component: WxButton
+    },
+    {
+      path: '/entry2',
+      name: 'Entry2',
+      component: Entry2
+    },
+    {
+      path: '/entry3',
+      name: 'Entry3',
+      component: Entry3
     }
   ]
 })

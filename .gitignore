@@ -60,6 +60,15 @@ typings/
 dist
 .temp
 platforms/android/.gradle
-platforms/android/app/build
+platforms/android/.idea
+platforms/android/.project
+platforms/android/.settings
+platforms/android/android.iml
 platforms/android/build
+platforms/android/local.properties
+platforms/android/app/.classpath
+platforms/android/app/.project
+platforms/android/app/.settings
+platforms/android/app/app.iml
+platforms/android/app/build
 

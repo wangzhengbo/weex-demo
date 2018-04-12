@@ -8,7 +8,9 @@ const vueWebTemp = helper.rootNode(config.templateDir);
 const hasPluginInstalled = fs.existsSync(helper.rootNode(config.pluginFilePath));
 const isWin = /^win/.test(process.platform);
 const weexEntry = {
-  'index': helper.root('entry.js')
+  'index': helper.root('entry.js'),
+  'entry2': helper.root('entry2.js'),
+  'entry3': helper.root('entry3.js')
 }
 
 const getEntryFileContent = (source, routerpath) => {
@@ -50,7 +52,7 @@ const getEntryFile = () => {
 }
 
 // The entry file for web needs to add some library. such as vue, weex-vue-render
-// 1. src/entry.js 
+// 1. src/entry.js
 // import Vue from 'vue';
 // import weex from 'weex-vue-render';
 // weex.init(Vue);
@@ -112,7 +114,7 @@ const webConfig = {
    * See: http://webpack.github.io/docs/configuration.html#module
    */
   module: {
-    // webpack 2.0 
+    // webpack 2.0
     rules: useEslint.concat([
       {
         test: /\.js$/,
@@ -152,7 +154,7 @@ const webConfig = {
                 }
               }
             ]
-            
+
           })
         }]
       }
