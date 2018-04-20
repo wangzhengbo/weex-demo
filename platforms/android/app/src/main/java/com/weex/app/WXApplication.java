@@ -1,6 +1,8 @@
 package com.weex.app;
 
 import android.app.Application;
+import android.os.Build;
+import android.os.StrictMode;
 
 import com.weex.app.extend.ImageAdapter;
 import com.weex.app.extend.WXEventModule;
@@ -15,6 +17,14 @@ public class WXApplication extends Application {
   @Override
   public void onCreate() {
     super.onCreate();
+
+    // See https://juejin.im/post/5acf7052f265da23853341e4
+    if (Build.VERSION.SDK_INT >= 18) {
+      StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+      StrictMode.setVmPolicy(builder.build());
+      builder.detectFileUriExposure();
+    }
+
     WXSDKEngine.addCustomOptions("appName", "WXSample");
     WXSDKEngine.addCustomOptions("appGroup", "WXApp");
     WXSDKEngine.initialize(this,
